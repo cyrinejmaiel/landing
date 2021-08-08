@@ -1,0 +1,229 @@
+.
+├── images
+├── css
+│   ├── components
+│   │   ├── avatar.css
+│   │   ├── banner.css
+│   │   └── button.css
+│   └── style.css
+└── index.html
+Let's build your UI kit
+1. Create your second project
+It’s time to build your second project: a website for your startup or for a personal project. For this new project, you are going to adopt a new organization of your CSS files and start by coding a UI kit, i.e. a library of components that you will be able to re-use to build web pages.
+
+2. Organize your CSS with component files
+From this point, you will start organizing your CSS code with one CSS file for each component. A button is a standard component, such as an avatar, a card, a list, a navbar, a tab, a form, etc… Each of these components deserve its own CSS file. Your new project architecture should look like:
+
+.
+├── images
+├── css
+│   ├── components
+│   │   ├── avatar.css
+│   │   ├── banner.css
+│   │   └── button.css
+│   └── style.css
+└── index.html
+Then in style.css:
+
+/* Importing Google fonts */
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,700");
+
+/* Importing component files */
+@import url("components/avatar.css");
+@import url("components/banner.css");
+@import url("components/button.css");
+
+/* General style rules for fonts and colors */
+body {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  margin: 0px;
+}
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
+<head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+Let's build your UI kit
+1. Create your second project
+It’s time to build your second project: a website for your startup or for a personal project. For this new project, you are going to adopt a new organization of your CSS files and start by coding a UI kit, i.e. a library of components that you will be able to re-use to build web pages.
+
+2. Organize your CSS with component files
+From this point, you will start organizing your CSS code with one CSS file for each component. A button is a standard component, such as an avatar, a card, a list, a navbar, a tab, a form, etc… Each of these components deserve its own CSS file. Your new project architecture should look like:
+
+.
+├── images
+├── css
+│   ├── components
+│   │   ├── avatar.css
+│   │   ├── banner.css
+│   │   └── button.css
+│   └── style.css
+└── index.html
+Then in style.css:
+
+/* Importing Google fonts */
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,700");
+
+/* Importing component files */
+@import url("components/avatar.css");
+@import url("components/banner.css");
+@import url("components/button.css");
+
+/* General style rules for fonts and colors */
+body {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  margin: 0px;
+}
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
+With this new organization, you just need one unique link to style.css in your HTML file:
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+3. Container, avatar, button
+Like in the video, start by coding very simple components in your project:
+
+A container to center page content in a responsive way.
+An avatar for profile picture.
+A primary button using the primary color of your color scheme.
+4. Building a banner
+A banner (also called hero sections) is a very important component that is used on most startup home pages. It looks like this:
+
+screen shot 2018-08-27 at 10 50 28
+
+As you can see, it re-uses the button and the container components.
+
+HTML structure
+Before coding the banner, take your time to draw its HTML structure on a sheet of paper like this
+
+screen shot 2018-08-27 at 10 50 28
+
+HTML structure of a banner
+
+Then, it’s very easy to write the HTML code, you just need to translate your drawings into HTML:
+
+<div class="banner">
+  <div class="container">
+    <h1>Your title here</h1>
+    <h2>Your tag line</h2>
+    <a href="" class="btn-blue">Your call-to-action</a>
+  </div>
+</div>
+Let's build your UI kit
+1. Create your second project
+It’s time to build your second project: a website for your startup or for a personal project. For this new project, you are going to adopt a new organization of your CSS files and start by coding a UI kit, i.e. a library of components that you will be able to re-use to build web pages.
+
+2. Organize your CSS with component files
+From this point, you will start organizing your CSS code with one CSS file for each component. A button is a standard component, such as an avatar, a card, a list, a navbar, a tab, a form, etc… Each of these components deserve its own CSS file. Your new project architecture should look like:
+
+.
+├── images
+├── css
+│   ├── components
+│   │   ├── avatar.css
+│   │   ├── banner.css
+│   │   └── button.css
+│   └── style.css
+└── index.html
+Then in style.css:
+
+/* Importing Google fonts */
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,700");
+
+/* Importing component files */
+@import url("components/avatar.css");
+@import url("components/banner.css");
+@import url("components/button.css");
+
+/* General style rules for fonts and colors */
+body {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  margin: 0px;
+}
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
+With this new organization, you just need one unique link to style.css in your HTML file:
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+3. Container, avatar, button
+Like in the video, start by coding very simple components in your project:
+
+A container to center page content in a responsive way.
+An avatar for profile picture.
+A primary button using the primary color of your color scheme.
+4. Building a banner
+A banner (also called hero sections) is a very important component that is used on most startup home pages. It looks like this:
+
+screen shot 2018-08-27 at 10 50 28
+
+As you can see, it re-uses the button and the container components.
+
+HTML structure
+Before coding the banner, take your time to draw its HTML structure on a sheet of paper like this
+
+screen shot 2018-08-27 at 10 50 28
+
+HTML structure of a banner
+
+Then, it’s very easy to write the HTML code, you just need to translate your drawings into HTML:
+
+<div class="banner">
+  <div class="container">
+    <h1>Your title here</h1>
+    <h2>Your tag line</h2>
+    <a href="" class="btn-blue">Your call-to-action</a>
+  </div>
+</div>
+Background image
+Don’t forget to create a new banner.css files in your components folder and import it into the main style.css file like in the video. For the background image you can use the following CSS properties for background:
+
+.banner {
+  /* 1. Set a background image */
+  background-image: url(../../images/background.jpg);   
+  /* 2. Make the background image cover the banner div */
+	background-size: cover;     
+  /* 3. Center the image */
+	background-position: center;
+}
+.banner h1 {
+  color: white;
+  font-size: 50px;
+}
+.banner h2 {
+  color: white;
+  font-size: 30px;
+  font-weight: lighter;
+	opacity: 0.8;
+}
+.banner {
+  background-image:
+    /* Transparent gradient above */
+    linear-gradient(-225deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 50%),
+    /* Then image below */
+    url('images/background.jpg');
+}
+.banner-with-flat-filter {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/background.jpg');
+}
